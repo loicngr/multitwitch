@@ -1,0 +1,7 @@
+{
+  "appId": "fr.zaekof.multitwitch",
+  "appName": "Multi Twitch",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
+}

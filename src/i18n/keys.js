@@ -1,0 +1,5 @@
+export const I18N_HELP = 'appMenuLinkTitleHelp'
+export const I18N_CREATED_BY = 'createdBy'
+export const I18N_LANGUAGE = 'language'
+export const I18N_FAILED = 'failed'
+export const I18N_SUCCESS = 'success'

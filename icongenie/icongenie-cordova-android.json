@@ -1,0 +1,231 @@
+{
+  "params": {
+    "skipTrim": true,
+    "padding": [
+      0,
+      0
+    ],
+    "include": [
+      "cordova"
+    ],
+    "splashscreenColor": "627078"
+  },
+  "assets": [
+    {
+    "generator": "png",
+    "name": "ldpi.png",
+    "folder": "src-cordova/res/android",
+    "sizes": [
+      36
+    ],
+    "platform": "cordova-android",
+    "density": "ldpi"
+  },
+    {
+      "generator": "png",
+      "name": "mdpi.png",
+      "folder": "src-cordova/res/android",
+      "sizes": [
+        48
+      ],
+      "platform": "cordova-android",
+      "density": "mdpi"
+    },
+    {
+      "generator": "png",
+      "name": "hdpi.png",
+      "folder": "src-cordova/res/android",
+      "sizes": [
+        72
+      ],
+      "platform": "cordova-android",
+      "density": "hdpi"
+    },
+    {
+      "generator": "png",
+      "name": "xhdpi.png",
+      "folder": "src-cordova/res/android",
+      "sizes": [
+        96
+      ],
+      "platform": "cordova-android",
+      "density": "xhdpi"
+    },
+    {
+      "generator": "png",
+      "name": "xxhdpi.png",
+      "folder": "src-cordova/res/android",
+      "sizes": [
+        144
+      ],
+      "platform": "cordova-android",
+      "density": "xxhdpi"
+    },
+    {
+      "generator": "png",
+      "name": "xxxhdpi.png",
+      "folder": "src-cordova/res/android",
+      "sizes": [
+        192
+      ],
+      "platform": "cordova-android",
+      "density": "xxxhdpi"
+    },
+    {
+      "generator": "splashscreen",
+      "name": "splash-land-ldpi.png",
+      "folder": "src-cordova/res/screen/android",
+      "sizes": [
+        [
+          320,
+          200
+        ]
+      ],
+      "platform": "cordova-android",
+      "density": "land-ldpi"
+    },
+    {
+      "generator": "splashscreen",
+      "name": "splash-port-ldpi.png",
+      "folder": "src-cordova/res/screen/android",
+      "sizes": [
+        [
+          200,
+          320
+        ]
+      ],
+      "platform": "cordova-android",
+      "density": "port-ldpi"
+    },
+    {
+      "generator": "splashscreen",
+      "name": "splash-land-mdpi.png",
+      "folder": "src-cordova/res/screen/android",
+      "sizes": [
+        [
+          480,
+          320
+        ]
+      ],
+      "platform": "cordova-android",
+      "density": "land-mdpi"
+    },
+    {
+      "generator": "splashscreen",
+      "name": "splash-port-mdpi.png",
+      "folder": "src-cordova/res/screen/android",
+      "sizes": [
+        [
+          320,
+          480
+        ]
+      ],
+      "platform": "cordova-android",
+      "density": "port-mdpi"
+    },
+    {
+      "generator": "splashscreen",
+      "name": "splash-land-hdpi.png",
+      "folder": "src-cordova/res/screen/android",
+      "sizes": [
+        [
+          800,
+          480
+        ]
+      ],
+      "platform": "cordova-android",
+      "density": "land-hdpi"
+    },
+    {
+      "generator": "splashscreen",
+      "name": "splash-port-hdpi.png",
+      "folder": "src-cordova/res/screen/android",
+      "sizes": [
+        [
+          480,
+          800
+        ]
+      ],
+      "platform": "cordova-android",
+      "density": "port-hdpi"
+    },
+    {
+      "generator": "splashscreen",
+      "name": "splash-land-xhdpi.png",
+      "folder": "src-cordova/res/screen/android",
+      "sizes": [
+        [
+          1280,
+          720
+        ]
+      ],
+      "platform": "cordova-android",
+      "density": "land-xhdpi"
+    },
+    {
+      "generator": "splashscreen",
+      "name": "splash-port-xhdpi.png",
+      "folder": "src-cordova/res/screen/android",
+      "sizes": [
+        [
+          720,
+          1280
+        ]
+      ],
+      "platform": "cordova-android",
+      "density": "port-xhdpi"
+    },
+    {
+      "generator": "splashscreen",
+      "name": "splash-land-xxhdpi.png",
+      "folder": "src-cordova/res/screen/android",
+      "sizes": [
+        [
+          1600,
+          960
+        ]
+      ],
+      "platform": "cordova-android",
+      "density": "land-xxhdpi"
+    },
+    {
+      "generator": "splashscreen",
+      "name": "splash-port-xxhdpi.png",
+      "folder": "src-cordova/res/screen/android",
+      "sizes": [
+        [
+          960,
+          1600
+        ]
+      ],
+      "platform": "cordova-android",
+      "density": "port-xxhdpi"
+    },
+    {
+      "generator": "splashscreen",
+      "name": "splash-land-xxxhdpi.png",
+      "folder": "src-cordova/res/screen/android",
+      "sizes": [
+        [
+          1920,
+          1280
+        ]
+      ],
+      "platform": "cordova-android",
+      "density": "land-xxxhdpi"
+    },
+    {
+      "generator": "splashscreen",
+      "name": "splash-port-xxxhdpi.png",
+      "folder": "src-cordova/res/screen/android",
+      "sizes": [
+        [
+          1280,
+          1920
+        ]
+      ],
+      "platform": "cordova-android",
+      "density": "port-xxxhdpi"
+    }
+  ]
+}

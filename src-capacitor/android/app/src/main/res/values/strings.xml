@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Multi Twitch</string>
+    <string name="title_activity_main">Multi Twitch</string>
+    <string name="package_name">fr.zaekof.multitwitch</string>
+    <string name="custom_url_scheme">fr.zaekof.multitwitch</string>
+</resources>

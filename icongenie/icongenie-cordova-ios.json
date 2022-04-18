@@ -1,0 +1,411 @@
+{
+  "params": {
+    "skipTrim": false,
+    "padding": [
+      0,
+      0
+    ],
+    "include": [
+      "cordova"
+    ],
+    "splashscreenColor": "627078"
+  },
+  "assets": [
+    {
+      "generator": "png",
+      "name": "icon.png",
+      "folder": "src-cordova/res/ios",
+      "sizes": [
+        57
+      ],
+      "platform": "cordova-ios",
+      "background": true
+    },
+    {
+      "generator": "png",
+      "name": "icon@2x.png",
+      "folder": "src-cordova/res/ios",
+      "sizes": [
+        114
+      ],
+      "platform": "cordova-ios",
+      "background": true
+    },
+    {
+      "generator": "png",
+      "name": "icon-20@2x.png",
+      "folder": "src-cordova/res/ios",
+      "sizes": [
+        40
+      ],
+      "platform": "cordova-ios",
+      "background": true
+    },
+    {
+      "generator": "png",
+      "name": "icon-20@3x.png",
+      "folder": "src-cordova/res/ios",
+      "sizes": [
+        60
+      ],
+      "platform": "cordova-ios",
+      "background": true
+    },
+    {
+      "generator": "png",
+      "name": "icon-29.png",
+      "folder": "src-cordova/res/ios",
+      "sizes": [
+        29
+      ],
+      "platform": "cordova-ios",
+      "background": true
+    },
+    {
+      "generator": "png",
+      "name": "icon-29@2x.png",
+      "folder": "src-cordova/res/ios",
+      "sizes": [
+        58
+      ],
+      "platform": "cordova-ios",
+      "background": true
+    },
+    {
+      "generator": "png",
+      "name": "icon-29@3x.png",
+      "folder": "src-cordova/res/ios",
+      "sizes": [
+        87
+      ],
+      "platform": "cordova-ios",
+      "background": true
+    },
+    {
+      "generator": "png",
+      "name": "icon-40@2x.png",
+      "folder": "src-cordova/res/ios",
+      "sizes": [
+        80
+      ],
+      "platform": "cordova-ios",
+      "background": true
+    },
+    {
+      "generator": "png",
+      "name": "icon-60@2x.png",
+      "folder": "src-cordova/res/ios",
+      "sizes": [
+        120
+      ],
+      "platform": "cordova-ios",
+      "background": true
+    },
+    {
+      "generator": "png",
+      "name": "icon-60@3x.png",
+      "folder": "src-cordova/res/ios",
+      "sizes": [
+        180
+      ],
+      "platform": "cordova-ios",
+      "background": true
+    },
+    {
+      "generator": "png",
+      "name": "icon-20.png",
+      "folder": "src-cordova/res/ios",
+      "sizes": [
+        20
+      ],
+      "platform": "cordova-ios",
+      "background": true
+    },
+    {
+      "generator": "png",
+      "name": "icon-20@2x.png",
+      "folder": "src-cordova/res/ios",
+      "sizes": [
+        40
+      ],
+      "platform": "cordova-ios",
+      "background": true
+    },
+    {
+      "generator": "png",
+      "name": "icon-40.png",
+      "folder": "src-cordova/res/ios",
+      "sizes": [
+        40
+      ],
+      "platform": "cordova-ios",
+      "background": true
+    },
+    {
+      "generator": "png",
+      "name": "icon-50.png",
+      "folder": "src-cordova/res/ios",
+      "sizes": [
+        50
+      ],
+      "platform": "cordova-ios",
+      "background": true
+    },
+    {
+      "generator": "png",
+      "name": "icon-50@2x.png",
+      "folder": "src-cordova/res/ios",
+      "sizes": [
+        100
+      ],
+      "platform": "cordova-ios",
+      "background": true
+    },
+    {
+      "generator": "png",
+      "name": "icon-72.png",
+      "folder": "src-cordova/res/ios",
+      "sizes": [
+        72
+      ],
+      "platform": "cordova-ios",
+      "background": true
+    },
+    {
+      "generator": "png",
+      "name": "icon-72@2x.png",
+      "folder": "src-cordova/res/ios",
+      "sizes": [
+        144
+      ],
+      "platform": "cordova-ios",
+      "background": true
+    },
+    {
+      "generator": "png",
+      "name": "icon-76.png",
+      "folder": "src-cordova/res/ios",
+      "sizes": [
+        76
+      ],
+      "platform": "cordova-ios",
+      "background": true
+    },
+    {
+      "generator": "png",
+      "name": "icon-76@2x.png",
+      "folder": "src-cordova/res/ios",
+      "sizes": [
+        152
+      ],
+      "platform": "cordova-ios",
+      "background": true
+    },
+    {
+      "generator": "png",
+      "name": "icon-83.5@2x.png",
+      "folder": "src-cordova/res/ios",
+      "sizes": [
+        167
+      ],
+      "platform": "cordova-ios",
+      "background": true
+    },
+    {
+      "generator": "png",
+      "name": "icon-1024.png",
+      "folder": "src-cordova/res/ios",
+      "sizes": [
+        1024
+      ],
+      "platform": "cordova-ios",
+      "background": true
+    },
+    {
+      "generator": "png",
+      "name": "icon-24@2x.png",
+      "folder": "src-cordova/res/ios",
+      "sizes": [
+        48
+      ],
+      "platform": "cordova-ios",
+      "background": true
+    },
+    {
+      "generator": "png",
+      "name": "icon-27.5@2x.png",
+      "folder": "src-cordova/res/ios",
+      "sizes": [
+        55
+      ],
+      "platform": "cordova-ios",
+      "background": true
+    },
+    {
+      "generator": "png",
+      "name": "icon-29@2x.png",
+      "folder": "src-cordova/res/ios",
+      "sizes": [
+        58
+      ],
+      "platform": "cordova-ios",
+      "background": true
+    },
+    {
+      "generator": "png",
+      "name": "icon-29@3x.png",
+      "folder": "src-cordova/res/ios",
+      "sizes": [
+        87
+      ],
+      "platform": "cordova-ios",
+      "background": true
+    },
+    {
+      "generator": "png",
+      "name": "icon-40@2x.png",
+      "folder": "src-cordova/res/ios",
+      "sizes": [
+        80
+      ],
+      "platform": "cordova-ios",
+      "background": true
+    },
+    {
+      "generator": "png",
+      "name": "icon-44@2x.png",
+      "folder": "src-cordova/res/ios",
+      "sizes": [
+        88
+      ],
+      "platform": "cordova-ios",
+      "background": true
+    },
+    {
+      "generator": "png",
+      "name": "icon-50@2x.png",
+      "folder": "src-cordova/res/ios",
+      "sizes": [
+        100
+      ],
+      "platform": "cordova-ios",
+      "background": true
+    },
+    {
+      "generator": "png",
+      "name": "icon-86@2x.png",
+      "folder": "src-cordova/res/ios",
+      "sizes": [
+        172
+      ],
+      "platform": "cordova-ios",
+      "background": true
+    },
+    {
+      "generator": "png",
+      "name": "icon-98@2x.png",
+      "folder": "src-cordova/res/ios",
+      "sizes": [
+        196
+      ],
+      "platform": "cordova-ios",
+      "background": true
+    },
+    {
+      "generator": "splashscreen",
+      "name": "Default@2x~iphone~anyany.png",
+      "folder": "src-cordova/res/screen/ios",
+      "sizes": [
+        [
+          1334,
+          1334
+        ]
+      ],
+      "platform": "cordova-ios"
+    },
+    {
+      "generator": "splashscreen",
+      "name": "Default@2x~iphone~comany.png",
+      "folder": "src-cordova/res/screen/ios",
+      "sizes": [
+        [
+          750,
+          1334
+        ]
+      ],
+      "platform": "cordova-ios"
+    },
+    {
+      "generator": "splashscreen",
+      "name": "Default@2x~iphone~comcom.png",
+      "folder": "src-cordova/res/screen/ios",
+      "sizes": [
+        [
+          1334,
+          750
+        ]
+      ],
+      "platform": "cordova-ios"
+    },
+    {
+      "generator": "splashscreen",
+      "name": "Default@3x~iphone~anyany.png",
+      "folder": "src-cordova/res/screen/ios",
+      "sizes": [
+        [
+          2208,
+          2208
+        ]
+      ],
+      "platform": "cordova-ios"
+    },
+    {
+      "generator": "splashscreen",
+      "name": "Default@3x~iphone~anycom.png",
+      "folder": "src-cordova/res/screen/ios",
+      "sizes": [
+        [
+          2208,
+          1242
+        ]
+      ],
+      "platform": "cordova-ios"
+    },
+    {
+      "generator": "splashscreen",
+      "name": "Default@3x~iphone~comany.png",
+      "folder": "src-cordova/res/screen/ios",
+      "sizes": [
+        [
+          1242,
+          2208
+        ]
+      ],
+      "platform": "cordova-ios"
+    },
+    {
+      "generator": "splashscreen",
+      "name": "Default@2x~ipad~anyany.png",
+      "folder": "src-cordova/res/screen/ios",
+      "sizes": [
+        [
+          2732,
+          2732
+        ]
+      ],
+      "platform": "cordova-ios"
+    },
+    {
+      "generator": "splashscreen",
+      "name": "Default@2x~ipad~comany.png",
+      "folder": "src-cordova/res/screen/ios",
+      "sizes": [
+        [
+          1278,
+          2732
+        ]
+      ],
+      "platform": "cordova-ios"
+    }
+  ]
+}
