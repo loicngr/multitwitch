@@ -1,7 +1,9 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
-      <q-toolbar>
+      <q-toolbar
+        id="videoToolbar"
+      >
         <q-btn
           flat
           dense
@@ -46,7 +48,7 @@ export default defineComponent({
 
   setup () {
     const { name } = process.env.APP
-    const showHUD = ref(true)
+    const showHUD = ref(false)
 
     return {
       appName: name,

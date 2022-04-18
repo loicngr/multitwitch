@@ -2,6 +2,10 @@
   <div
     id="gridVideo"
     class="flex justify-start"
+    :class="overflow ? 'overflow-hidden' : ''"
+    :style="{
+      height: 'auto'
+    }"
   >
     <resizable-block
       v-for="item in value"
@@ -10,6 +14,13 @@
       :data-id="item.id"
     >
       <template #content>
+        <!--        <div-->
+        <!--          :style="{-->
+        <!--            display: 'block',-->
+        <!--            width: item.width,-->
+        <!--            height: item.height-->
+        <!--          }"-->
+        <!--        />-->
         <iframe
           :src="`https://player.twitch.tv/?channel=${item.username}&parent=localhost`"
           :width="item.width"
@@ -75,11 +86,19 @@ export default defineComponent({
     stubObjectModelMixin
   ],
 
+  props: {
+    overflow: {
+      type: Boolean,
+      default: false
+    }
+  },
+
   setup (props, { attrs }) {
     const { 'show-hud': showHUD } = toRefs(attrs)
 
     return {
-      showHUD
+      showHUD,
+      valueCount: props.value.length
     }
   },
 

@@ -11,24 +11,24 @@
         {{ appName }}
       </q-item-label>
 
-      <q-item
-        clickable
-        href="/#/help"
-        tag="a"
-      >
-        <q-item-section
-          avatar
-        >
-          <q-icon name="help" />
-        </q-item-section>
+      <!--      <q-item-->
+      <!--        clickable-->
+      <!--        href="/#/help"-->
+      <!--        tag="a"-->
+      <!--      >-->
+      <!--        <q-item-section-->
+      <!--          avatar-->
+      <!--        >-->
+      <!--          <q-icon name="help" />-->
+      <!--        </q-item-section>-->
 
-        <q-item-section>
-          <q-item-label>{{ $t(i18nLinkTitleHelp) }}</q-item-label>
-          <!--          <q-item-label caption>-->
-          <!--            {{ caption }}-->
-          <!--          </q-item-label>-->
-        </q-item-section>
-      </q-item>
+      <!--        <q-item-section>-->
+      <!--          <q-item-label>{{ $t(i18nLinkTitleHelp) }}</q-item-label>-->
+      <!--          &lt;!&ndash;          <q-item-label caption>&ndash;&gt;-->
+      <!--          &lt;!&ndash;            {{ caption }}&ndash;&gt;-->
+      <!--          &lt;!&ndash;          </q-item-label>&ndash;&gt;-->
+      <!--        </q-item-section>-->
+      <!--      </q-item>-->
 
       <q-item>
         <q-item-section avatar>

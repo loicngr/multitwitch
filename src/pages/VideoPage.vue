@@ -1,14 +1,18 @@
 <template>
-  <q-page class="bg-accent">
+  <q-page
+    id="videoPage"
+    class="bg-accent"
+  >
     <grid-video
       :value="items"
       v-bind="$attrs"
+      :overflow="overflow"
     />
   </q-page>
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue'
+import { defineComponent, onMounted, ref } from 'vue'
 import GridVideo from 'components/Video/GridVideo.vue'
 
 export default defineComponent({
@@ -19,27 +23,93 @@ export default defineComponent({
   setup () {
     const items = ref([
       {
-        username: 'zaekof',
-        id: 112233,
-        width: 300,
-        height: 150
+        username: 'zerator',
+        id: 112233
+      },
+      {
+        username: 'bibixhd',
+        id: 112234
       },
       {
         username: 'paranoi4k',
-        id: 112234,
-        width: 300,
-        height: 150
-      },
-      {
-        username: 'mastersnakou',
-        id: 112235,
-        width: 300,
-        height: 150
+        id: 112235
       }
     ])
 
+    onMounted(() => {
+      const toolbarHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--core-toolbar-height')) ||
+        document.getElementById('videoToolbar').clientHeight ||
+        50
+
+      const windowWidth = window.innerWidth
+      const windowHeight = (window.innerHeight - toolbarHeight)
+      const length = items.value.length
+
+      const windowWidthPerTwo = Math.floor(windowWidth / 2)
+      const windowHeightPerTwo = Math.floor(windowHeight / 2)
+
+      const isPair = length % 2 === 0
+
+      if (isPair) {
+        switch (length) {
+          case 2:
+            items.value.forEach(i => {
+              i.width = windowWidthPerTwo
+              i.height = windowHeight
+            })
+            break
+          case 4:
+            items.value.forEach(i => {
+              i.width = windowWidthPerTwo
+              i.height = windowHeightPerTwo
+            })
+            break
+          default:
+            items.value.forEach(i => {
+              i.width = windowWidthPerTwo - 10
+              i.height = windowHeightPerTwo - 10
+            })
+            break
+        }
+      } else {
+        switch (length) {
+          case 1:
+            items.value.forEach(i => {
+              i.width = windowWidth
+              i.height = windowHeight
+            })
+            break
+          case 3:
+            items.value.forEach((i, index) => {
+              if ((index + 1) % 3 === 0) {
+                i.width = windowWidth
+              } else {
+                i.width = windowWidthPerTwo
+              }
+
+              i.height = windowHeightPerTwo
+            })
+            break
+          default:
+            items.value.forEach((i, _index) => {
+              const index = _index + 1
+
+              if ((index % 2 !== 0) && index === length) {
+                i.width = windowWidth - 20
+              } else {
+                i.width = windowWidthPerTwo - 10
+              }
+
+              i.height = windowHeightPerTwo
+            })
+            break
+        }
+      }
+    })
+
     return {
-      items
+      items,
+      overflow: items.value.length <= 4
     }
   }
 })

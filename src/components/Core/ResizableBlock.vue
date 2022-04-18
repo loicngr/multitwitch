@@ -1,12 +1,12 @@
 <template>
   <div
     :style="{
-      minWidth: '150px',
-      minHeight: '150px',
+      minWidth: '50px',
+      minHeight: '50px',
       width: value.width + 'px',
       height: value.height + 'px',
     }"
-    class="bg-blue relative-position q-mx-sm q-my-sm"
+    class="relative-position"
   >
     <slot name="content" />
     <slot name="top" />
