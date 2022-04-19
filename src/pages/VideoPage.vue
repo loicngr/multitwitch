@@ -8,12 +8,15 @@
       v-bind="$attrs"
       :overflow="overflow"
     />
+
+    <q-resize-observer @resize="onResize" />
   </q-page>
 </template>
 
 <script>
 import { defineComponent, onMounted, ref } from 'vue'
 import GridVideo from 'components/Video/GridVideo.vue'
+import { useMainStore } from 'stores/store.js'
 
 export default defineComponent({
   name: 'VideoPage',
@@ -21,22 +24,11 @@ export default defineComponent({
   components: { GridVideo },
 
   setup () {
-    const items = ref([
-      {
-        username: 'zerator',
-        id: 112233
-      },
-      {
-        username: 'bibixhd',
-        id: 112234
-      },
-      {
-        username: 'paranoi4k',
-        id: 112235
-      }
-    ])
+    const mainStore = useMainStore()
 
-    onMounted(() => {
+    const items = ref([...mainStore.getAllVideoUsers])
+
+    const generateVideosSizes = () => {
       const toolbarHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--core-toolbar-height')) ||
         document.getElementById('videoToolbar').clientHeight ||
         50
@@ -105,10 +97,19 @@ export default defineComponent({
             break
         }
       }
+    }
+
+    const onResize = () => {
+      generateVideosSizes()
+    }
+
+    onMounted(() => {
+      generateVideosSizes()
     })
 
     return {
       items,
+      onResize,
       overflow: items.value.length <= 4
     }
   }

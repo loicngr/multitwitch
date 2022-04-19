@@ -5,7 +5,7 @@
 <script>
 import { defineComponent } from 'vue'
 import { useQuasar } from 'quasar'
-import { localesByKeys } from 'src/i18n'
+import { localesByKeys } from 'src/i18n/index.js'
 import { useI18n } from 'vue-i18n'
 
 export default defineComponent({
@@ -17,7 +17,7 @@ export default defineComponent({
     const locales = localesByKeys()
 
     const userLocal = $q.lang.getLocale()
-    if (locales[userLocal] && $q.lang.isoName !== userLocal) {
+    if (userLocal && locales[userLocal] && $q.lang.isoName !== userLocal) {
       locale.value = userLocal
     }
   }

@@ -8,10 +8,10 @@
     }"
   >
     <resizable-block
-      v-for="item in value"
-      :key="item.id"
+      v-for="(item, index) in value"
+      :key="index"
       :value="item"
-      :data-id="item.id"
+      :data-id="index"
     >
       <template #content>
         <!--        <div-->
@@ -22,7 +22,7 @@
         <!--          }"-->
         <!--        />-->
         <iframe
-          :src="`https://player.twitch.tv/?channel=${item.username}&parent=localhost`"
+          :src="`https://player.twitch.tv/?channel=${item.username}&parent=${appUrl}`"
           :width="item.width"
           :height="item.height"
         />
@@ -98,6 +98,7 @@ export default defineComponent({
 
     return {
       showHUD,
+      appUrl: window.location.hostname,
       valueCount: props.value.length
     }
   },
