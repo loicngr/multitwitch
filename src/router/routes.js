@@ -7,11 +7,11 @@ const routes = [
       {
         path: '',
         component: () => import('pages/IndexPage.vue')
-      },
-      {
-        path: 'about',
-        component: () => import('pages/AboutPage.vue')
       }
+      // {
+      //   path: 'about',
+      //   component: () => import('pages/AboutPage.vue')
+      // }
     ]
   },
   {
@@ -21,6 +21,17 @@ const routes = [
       { path: '', component: () => import('pages/VideoPage.vue') }
     ]
   },
+
+  // {
+  //   path: '/cb',
+  //   component: () => import('layouts/CbLayout.vue'),
+  //   children: [
+  //     {
+  //       path: 'twitch-oauth',
+  //       component: () => import('pages/TwitchOauthPage.vue')
+  //     }
+  //   ]
+  // },
 
   // Always leave this as last one,
   // but you can also remove it

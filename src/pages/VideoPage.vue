@@ -7,6 +7,7 @@
       :value="items"
       v-bind="$attrs"
       :overflow="overflow"
+      @remove="onVideoRemove"
     />
 
     <q-resize-observer @resize="onResize" />
@@ -110,6 +111,7 @@ export default defineComponent({
     return {
       items,
       onResize,
+      onVideoRemove: generateVideosSizes,
       overflow: items.value.length <= 4
     }
   }

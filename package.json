@@ -23,6 +23,7 @@
     "@quasar/extras": "^1.0.0",
     "@vueuse/core": "^8.2.6",
     "axios": "^0.21.1",
+    "dotenv": "^16.0.0",
     "interactjs": "^1.10.11",
     "lodash": "^4.17.21",
     "mitt": "^3.0.0",

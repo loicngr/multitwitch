@@ -11,7 +11,7 @@
       v-for="(item, index) in value"
       :key="index"
       :value="item"
-      :data-id="index"
+      :data-username="item.username"
     >
       <template #content>
         <!--        <div-->
@@ -93,6 +93,8 @@ export default defineComponent({
     }
   },
 
+  emits: ['remove'],
+
   setup (props, { attrs }) {
     const { 'show-hud': showHUD } = toRefs(attrs)
 
@@ -119,7 +121,9 @@ export default defineComponent({
             })
           ],
           listeners: {
-            move: this.onVideoMove
+            move: (e) => {
+              this.onVideoMove(e)
+            }
           }
         })
     }
@@ -127,12 +131,12 @@ export default defineComponent({
 
   methods: {
     onVideoMove (event) {
-      const { id } = event.target.dataset
-      this.updateVideoSize(parseInt(id), event.rect)
+      const { username } = event.target.dataset
+      this.updateVideoSize(username, event.rect)
     },
 
-    updateVideoSize (id, { width, height }) {
-      const find = this.value.find(i => i.id === id)
+    updateVideoSize (username, { width, height }) {
+      const find = this.value.find((i) => i.username === username)
 
       if (find === undefined) {
         return
@@ -146,6 +150,7 @@ export default defineComponent({
       const index = this.value.findIndex(i => i === item)
       if (index !== -1) {
         this.value.splice(index, 1)
+        this.$emit('remove')
       }
     }
   }

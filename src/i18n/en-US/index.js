@@ -4,11 +4,13 @@ import {
   I18N_HELP,
   I18N_LANGUAGE,
   I18N_LOADING,
+  I18N_LOGIN,
   I18N_SUBMIT,
   I18N_SUCCESS,
   I18N_USER_ADDED,
   I18N_USER_REMOVED,
-  I18N_USERNAME
+  I18N_USERNAME,
+  I18N_WELCOME
 } from 'src/i18n/keys'
 
 export default {
@@ -21,5 +23,7 @@ export default {
   [I18N_USER_REMOVED]: 'User removed',
   [I18N_SUBMIT]: 'Submit',
   [I18N_USERNAME]: 'Username',
-  [I18N_LOADING]: `Loading`
+  [I18N_LOADING]: `Loading`,
+  [I18N_WELCOME]: `Welcome`,
+  [I18N_LOGIN]: `Login`
 }

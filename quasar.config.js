@@ -75,7 +75,9 @@ module.exports = configure(function (/* ctx */) {
       // publicPath: '/',
       // analyze: true,
       env: {
-        APP
+        APP,
+        ...require('dotenv').config().parsed,
+        ...(process.env.PROD ? { TWITCH_APP_REDIRECT_URL: 'https://multitwitch.netlify.app/cb/twitch-oauth' } : {})
       },
       // rawDefine: {}
       // ignorePublicFolder: true,

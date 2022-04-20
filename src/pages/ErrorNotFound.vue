@@ -27,8 +27,30 @@
 
 <script>
 import { defineComponent } from 'vue'
+import { extractTokenFromUrl } from 'src/utils/api/twitch'
+import { useMainStore } from 'stores/store'
 
 export default defineComponent({
-  name: 'ErrorNotFound'
+  name: 'ErrorNotFound',
+
+  setup () {
+    const { TWITCH_APP_REDIRECT_URL } = process.env
+
+    const windowHref = window.location.href
+
+    if (TWITCH_APP_REDIRECT_URL && windowHref.startsWith(TWITCH_APP_REDIRECT_URL)) {
+      const accessToken = extractTokenFromUrl(windowHref)
+
+      if (!accessToken || _.isEmpty(accessToken)) {
+        return
+      }
+
+      const mainStore = useMainStore()
+      mainStore.updateTwitchAccessToken(accessToken)
+      window.location.href = window.location.origin
+    }
+
+    return {}
+  }
 })
 </script>
