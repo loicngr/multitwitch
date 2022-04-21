@@ -2,6 +2,9 @@
 
 Multi Twitch project
 
+![homeScreen](homeScreen.png)
+
+
 ## Install the dependencies
 ```bash
 yarn
