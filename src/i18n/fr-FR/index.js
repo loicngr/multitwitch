@@ -1,9 +1,12 @@
 import {
   I18N_CREATED_BY,
+  I18N_ENGLISH,
   I18N_FAILED,
+  I18N_FRENCH,
   I18N_HELP,
   I18N_LANGUAGE,
-  I18N_LOADING, I18N_LOGIN,
+  I18N_LOADING,
+  I18N_LOGIN,
   I18N_SUBMIT,
   I18N_SUCCESS,
   I18N_USER_ADDED,
@@ -13,6 +16,8 @@ import {
 } from 'src/i18n/keys'
 
 export default {
+  [I18N_ENGLISH]: 'Anglais',
+  [I18N_FRENCH]: 'Français',
   [I18N_HELP]: 'Aide',
   [I18N_CREATED_BY]: 'Créé par',
   [I18N_LANGUAGE]: 'Langage',

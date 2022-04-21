@@ -10,3 +10,6 @@ export const I18N_USERNAME = 'username'
 export const I18N_SUBMIT = 'submit'
 export const I18N_WELCOME = 'welcome'
 export const I18N_LOGIN = 'login'
+
+export const I18N_ENGLISH = 'english'
+export const I18N_FRENCH = 'french'

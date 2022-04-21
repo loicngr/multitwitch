@@ -5,11 +5,25 @@
     borderless
     dense
     emit-value
-    :label="$t(i18nLanguage)"
+    :label="$t(I18N_LANGUAGE)"
     map-options
-    options-dense
     style="min-width: 150px"
-  />
+  >
+    <template #selected-item="scope">
+      <div class="q-my-sm">
+        {{ scope.opt.label() }}
+      </div>
+    </template>
+    <template #option="scope">
+      <q-item v-bind="scope.itemProps">
+        <q-item-section>
+          <q-item-label>
+            {{ scope.opt.label() }}
+          </q-item-label>
+        </q-item-section>
+      </q-item>
+    </template>
+  </q-select>
 </template>
 
 <script>
@@ -27,7 +41,7 @@ export default defineComponent({
     return {
       locale,
       localeOptions,
-      i18nLanguage: I18N_LANGUAGE
+      I18N_LANGUAGE
     }
   }
 })
