@@ -2,7 +2,7 @@ import { toast } from 'src/utils/index.js'
 
 export const getTwitchOauthUrl = () => {
   if (!process.env.TWITCH_APP_CLIENT_ID || _.isEmpty(process.env.TWITCH_APP_CLIENT_ID)) {
-    console.error('Twitch app client id not find')
+    console.error('Twitch app client id not find', process.env.TWITCH_APP_CLIENT_ID, process.env.TWITCH_APP_REDIRECT_URL)
     return false
   }
 
