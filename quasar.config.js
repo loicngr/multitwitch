@@ -80,7 +80,6 @@ module.exports = configure(function (/* ctx */) {
         APP,
         TWITCH_APP_REDIRECT_URL: envBasePath + 'cb/twitch-oauth',
         TWITCH_APP_SCOPES: '',
-        TWITCH_APP_CLIENT_ID: '',
         ...require('dotenv').config().parsed
       },
       // rawDefine: {}
