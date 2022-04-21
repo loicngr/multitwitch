@@ -4,6 +4,9 @@ Multi Twitch project
 
 ![homeScreen](homeScreen.png)
 
+# Demo
+![demoResize](demoResize.gif)
+
 
 ## Install the dependencies
 ```bash
