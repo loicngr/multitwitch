@@ -39,11 +39,10 @@ export default defineComponent({
   },
 
   setup () {
-    const { name } = process.env.APP
     const leftDrawerOpen = ref(false)
 
     return {
-      appName: name,
+      appName: process.env.APP.name,
       leftDrawerOpen,
       toggleLeftDrawer () {
         leftDrawerOpen.value = !leftDrawerOpen.value

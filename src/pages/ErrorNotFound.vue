@@ -34,11 +34,9 @@ export default defineComponent({
   name: 'ErrorNotFound',
 
   setup () {
-    const { TWITCH_APP_REDIRECT_URL } = process.env
-
     const windowHref = window.location.href
 
-    if (TWITCH_APP_REDIRECT_URL && windowHref.startsWith(TWITCH_APP_REDIRECT_URL)) {
+    if (process.env.TWITCH_APP_REDIRECT_URL && windowHref.startsWith(process.env.TWITCH_APP_REDIRECT_URL)) {
       const accessToken = extractTokenFromUrl(windowHref)
 
       if (!accessToken || _.isEmpty(accessToken)) {

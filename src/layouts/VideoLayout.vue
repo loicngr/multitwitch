@@ -47,11 +47,10 @@ export default defineComponent({
   components: {},
 
   setup () {
-    const { name } = process.env.APP
     const showHUD = ref(false)
 
     return {
-      appName: name,
+      appName: process.env.APP.name,
       showHUD,
       toggleHUD () {
         showHUD.value = !showHUD.value

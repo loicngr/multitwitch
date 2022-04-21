@@ -12,8 +12,10 @@ const { configure } = require('quasar/wrappers')
 const path = require('path')
 
 module.exports = configure(function (/* ctx */) {
+  const envBasePath = process.env.DEV ? 'http://localhost:9000/' : 'https://multitwitch.netlify.app/'
   const APP = {
-    name: 'Multi Twitch'
+    name: 'Multi Twitch',
+    basePath: envBasePath
   }
 
   return {
@@ -76,8 +78,10 @@ module.exports = configure(function (/* ctx */) {
       // analyze: true,
       env: {
         APP,
-        ...require('dotenv').config().parsed,
-        ...(process.env.PROD ? { TWITCH_APP_REDIRECT_URL: 'https://multitwitch.netlify.app/cb/twitch-oauth' } : {})
+        TWITCH_APP_REDIRECT_URL: envBasePath + 'cb/twitch-oauth',
+        TWITCH_APP_SCOPES: '',
+        TWITCH_APP_CLIENT_ID: '',
+        ...require('dotenv').config().parsed
       },
       // rawDefine: {}
       // ignorePublicFolder: true,

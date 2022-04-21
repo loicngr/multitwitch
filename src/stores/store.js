@@ -47,9 +47,7 @@ export const useMainStore = defineStore({
         return false
       }
 
-      const { TWITCH_APP_CLIENT_ID } = process.env
-
-      if (!TWITCH_APP_CLIENT_ID || _.isEmpty(TWITCH_APP_CLIENT_ID)) {
+      if (!process.env.TWITCH_APP_CLIENT_ID || _.isEmpty(process.env.TWITCH_APP_CLIENT_ID)) {
         return false
       }
 
@@ -57,7 +55,7 @@ export const useMainStore = defineStore({
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${this.twitchAccessToken}`,
-          'Client-ID': TWITCH_APP_CLIENT_ID
+          'Client-ID': process.env.TWITCH_APP_CLIENT_ID
         }
       }).then(r => {
         api.defaults.headers.common.Authorization = `Bearer ${this.twitchAccessToken}`

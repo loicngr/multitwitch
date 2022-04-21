@@ -68,7 +68,6 @@ export default defineComponent({
   components: { SelectI18n },
 
   setup () {
-    const { name } = process.env.APP
     const mainStore = useMainStore()
     mainStore.apiTwitchGetCurrentUser()
 
@@ -76,7 +75,7 @@ export default defineComponent({
     const twitchUserLogged = computed(() => mainStore.isTwitchUserLogged)
 
     return {
-      appName: name,
+      appName: process.env.APP.name,
       twitchUserLogged,
       twitchCurrentUser,
       I18N_WELCOME,
