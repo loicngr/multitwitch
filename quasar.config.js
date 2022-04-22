@@ -67,13 +67,6 @@ module.exports = configure(function (/* ctx */) {
         node: 'node16'
       },
 
-      /**
-       * @param {QuasarHookParams} params
-       */
-      beforeBuild: (params) => {
-        console.log(process.env, params.quasarConf.build.env)
-      },
-
       vueRouterMode: 'hash', // available values: 'hash', 'history'
       // vueRouterBase,
       // vueDevtools,

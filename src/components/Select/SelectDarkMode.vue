@@ -1,11 +1,11 @@
 <template>
   <q-select
-    v-model="locale"
-    :options="selectLocaleOptions"
+    v-model="value"
+    :label="$t(I18N_THEME)"
+    :options="selectDarkModeOptions"
     borderless
     dense
     emit-value
-    :label="$t(I18N_LANGUAGE)"
     map-options
     style="min-width: 150px"
   >
@@ -27,27 +27,29 @@
 </template>
 
 <script>
-import { defineComponent, watch } from 'vue'
-import { useI18n } from 'vue-i18n'
-import { I18N_LANGUAGE } from 'src/i18n/keys'
+import { defineComponent, ref, watch } from 'vue'
+import { I18N_THEME } from 'src/i18n/keys'
+import { useQuasar } from 'quasar'
 import { useMainStore } from 'stores/store'
-import { selectLocaleOptions } from 'src/consts'
+import { selectDarkModeOptions } from 'src/consts'
 
 export default defineComponent({
-  name: 'SelectI18n',
+  name: 'SelectDarkMode',
 
   setup () {
-    const { locale } = useI18n({ useScope: 'global' })
+    const $q = useQuasar()
     const mainStore = useMainStore()
+    const value = ref($q.dark.isActive)
 
-    watch(locale, (v) => {
-      mainStore.updateConfig({ lang: v })
+    watch(value, (v) => {
+      $q.dark.set(v)
+      mainStore.updateConfig({ darkMode: v })
     })
 
     return {
-      locale,
-      selectLocaleOptions,
-      I18N_LANGUAGE
+      value,
+      selectDarkModeOptions,
+      I18N_THEME
     }
   }
 })

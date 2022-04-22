@@ -42,13 +42,14 @@ export default defineComponent({
       const windowHeightPerTwo = Math.floor(windowHeight / 2)
 
       const isPair = length % 2 === 0
+      const isWidthGreaterThanHeight = window.innerWidth > window.innerHeight
 
       if (isPair) {
         switch (length) {
           case 2:
             items.value.forEach(i => {
-              i.width = windowWidthPerTwo
-              i.height = windowHeight
+              i.width = isWidthGreaterThanHeight ? windowWidthPerTwo : windowWidth
+              i.height = isWidthGreaterThanHeight ? windowHeight : windowHeightPerTwo
             })
             break
           case 4:

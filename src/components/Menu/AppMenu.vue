@@ -34,6 +34,15 @@
 
       <q-item>
         <q-item-section avatar>
+          <q-icon name="dark_mode" />
+        </q-item-section>
+        <q-item-section>
+          <select-dark-mode />
+        </q-item-section>
+      </q-item>
+
+      <q-item>
+        <q-item-section avatar>
           <q-icon name="language" />
         </q-item-section>
         <q-item-section>
@@ -61,11 +70,15 @@ import SelectI18n from 'components/Select/SelectI18n.vue'
 import { computed, defineComponent } from 'vue'
 import { openTwitchOauth } from 'src/utils/api/twitch'
 import { useMainStore } from 'stores/store'
+import SelectDarkMode from 'components/Select/SelectDarkMode.vue'
 
 export default defineComponent({
   name: 'AppMenu',
 
-  components: { SelectI18n },
+  components: {
+    SelectDarkMode,
+    SelectI18n
+  },
 
   setup () {
     const mainStore = useMainStore()

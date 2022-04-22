@@ -1,14 +1,17 @@
 import {
   I18N_CREATED_BY,
+  I18N_DARK,
   I18N_ENGLISH,
   I18N_FAILED,
   I18N_FRENCH,
   I18N_HELP,
   I18N_LANGUAGE,
+  I18N_LIGHT,
   I18N_LOADING,
   I18N_LOGIN,
   I18N_SUBMIT,
   I18N_SUCCESS,
+  I18N_THEME,
   I18N_USER_ADDED,
   I18N_USER_REMOVED,
   I18N_USERNAME,
@@ -29,5 +32,8 @@ export default {
   [I18N_USERNAME]: 'Username',
   [I18N_LOADING]: `Loading`,
   [I18N_WELCOME]: `Welcome`,
-  [I18N_LOGIN]: `Login`
+  [I18N_LOGIN]: `Login`,
+  [I18N_THEME]: `Theme`,
+  [I18N_DARK]: `Dark`,
+  [I18N_LIGHT]: `Light`
 }

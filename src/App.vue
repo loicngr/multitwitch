@@ -5,8 +5,9 @@
 <script>
 import { defineComponent } from 'vue'
 import { useQuasar } from 'quasar'
-import { localesByKeys } from 'src/i18n/index.js'
 import { useI18n } from 'vue-i18n'
+import { useMainStore } from 'stores/store'
+import { localesByKeys } from 'src/consts'
 
 export default defineComponent({
   name: 'App',
@@ -14,11 +15,17 @@ export default defineComponent({
   setup () {
     const { locale } = useI18n({ useScope: 'global' })
     const $q = useQuasar()
+    const mainStore = useMainStore()
     const locales = localesByKeys()
-
     const userLocal = $q.lang.getLocale()
-    if (userLocal && locales[userLocal] && $q.lang.isoName !== userLocal) {
+
+    $q.dark.set(mainStore.getConfig.darkMode)
+
+    if (mainStore.getConfig.lang !== null) {
+      locale.value = mainStore.getConfig.lang
+    } else if (userLocal && locales[userLocal] && $q.lang.isoName !== userLocal) {
       locale.value = userLocal
+      mainStore.updateConfig({ lang: userLocal })
     }
   }
 })
