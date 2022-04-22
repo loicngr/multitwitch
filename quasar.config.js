@@ -71,7 +71,7 @@ module.exports = configure(function (/* ctx */) {
        * @param {QuasarHookParams} params
        */
       beforeBuild: (params) => {
-        console.log(process.env)
+        console.log(process.env, params.quasarConf.build.env)
       },
 
       vueRouterMode: 'hash', // available values: 'hash', 'history'
@@ -87,6 +87,7 @@ module.exports = configure(function (/* ctx */) {
         APP,
         TWITCH_APP_REDIRECT_URL: envBasePath + 'cb/twitch-oauth',
         TWITCH_APP_SCOPES: '',
+        TWITCH_APP_CLIENT_ID: process.env.TWITCH_APP_CLIENT_ID,
         ...require('dotenv').config().parsed
       },
       // rawDefine: {}
